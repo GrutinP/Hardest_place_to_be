@@ -1,0 +1,79 @@
+/* =====================================================================
+   11th Place — theme_kopanda_20 ブランド上書きCSS（ts11_override.css）
+   「１１番目が１番ツライ！」用。kopandaテーマのクラス名はそのままに、
+   色・ボタン・ダイアログ・一覧をこのゲームのデザインに合わせて再スキン。
+   ts20.css の「後」に読み込むこと（init.ks の loadcss の直後に1行追加）。
+   デザイントークン由来の値をハードコードしてあります。
+   ===================================================================== */
+
+/* --- glink ボタン（[glink color="ts20"]） ----------------------------- */
+.ts20 {
+  background: #2b3350;                /* slate-9 */
+  color: #ececf6;                     /* text-on-night */
+  border: 1.5px solid rgba(196,200,222,.22);
+  border-radius: 12px;
+  box-shadow: 0 4px 0 #1a1f3a;        /* 触感のある4pxの段差 */
+  text-shadow: none;
+  font-weight: 700;
+  transition: transform .1s ease, background .15s, border-color .15s, color .15s;
+}
+.ts20::before { display: none; }       /* kopandaの黒い二重枠を消す */
+
+.ts20:hover {
+  background: #353f63;
+  color: #ffffff;
+  border: 1.5px solid #e2483d;        /* 赤い傘＝ホバーのアクセント */
+  box-shadow: 0 4px 0 #1a1f3a;
+}
+.ts20:active {
+  background: #232a45;
+  color: #f15a4d;
+  border: 1.5px solid #b9322a;
+  box-shadow: none;
+  transform: translateY(4px);         /* 段差に沈む */
+}
+
+/* --- 確認ダイアログ（remodal） --------------------------------------- */
+.remodal {
+  color: #dcdcf0;
+  background: #1a1f3a;                 /* night-11 */
+  border: 1px solid rgba(196,200,222,.18);
+  border-radius: 14px;
+}
+.remodal-confirm {
+  color: #fff; background: #e2483d;    /* 赤い傘 */
+  border: none; border-radius: 999px; transition: all .12s;
+}
+.remodal-confirm:hover, .remodal-confirm:focus { background: #f15a4d; transform: translateY(-2px); }
+.remodal-confirm:hover:active { background: #b9322a; transform: translateY(0); }
+
+.remodal-cancel {
+  color: #fff; background: #4a5270;    /* slate-7 */
+  border: none; border-radius: 999px; transition: all .12s;
+}
+.remodal-cancel:hover, .remodal-cancel:focus { background: #5a6486; transform: translateY(-2px); }
+.remodal-cancel:hover:active { background: #4a5270; transform: translateY(0); }
+
+/* --- バックログ ------------------------------------------------------ */
+.log_body { color: #c4c8de; }
+.log_body::-webkit-scrollbar-thumb { background: #7b7fce; }   /* 紫陽花 */
+.log_body::-webkit-scrollbar-track { background: rgba(18,22,42,.55); }
+
+/* --- セーブ／ロード一覧 ---------------------------------------------- */
+.area_save_list::-webkit-scrollbar-thumb { background: #7b7fce; }
+.area_save_list::-webkit-scrollbar-track { background: rgba(18,22,42,.55); }
+.save_list_item_date { color: #ececf6; }
+.save_list_item_text { color: #9aa0bd; }
+/* 行ホバー時に紫陽花のうっすらしたグロー（kopandaのスロット画像は維持） */
+.save_list_item:hover > .save_list_item_thumb,
+.save_list_item:hover > .save_list_item_area {
+  box-shadow: inset 0 0 0 1.5px rgba(123,127,206,.55);
+}
+
+/* --- フォントは [plugin] タグの引数で指定（init.ks 編集不要） ---------
+   first.ks の例：
+   [plugin name="theme_kopanda_20" font_color="0xECECF6" name_color="0x9A9BDD" font_color2="0xC4C8DE"]
+   font_color  … 本文        (#ECECF6)
+   name_color  … 名前        (#9A9BDD = 紫陽花ソフト＝ヒロイン)
+   font_color2 … 既読色      (#C4C8DE)
+   --------------------------------------------------------------------- */

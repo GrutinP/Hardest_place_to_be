@@ -93,7 +93,7 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 	
 [endscript]
 
-
+/*
 ;CGモードのボタンを表示するためのマクロ
 [macro name="cg_image_button"]
 	
@@ -177,9 +177,12 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
         @jump storage="replay.ks" 
         
     [endif]
+	
+	[jump storage="replay.ks" cond]
 
 [endmacro]
 
+*/
 [return]
 
 
