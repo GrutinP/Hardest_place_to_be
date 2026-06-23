@@ -5,14 +5,39 @@
 
 ---
 
+## 【最重要】タグ名の使用ルール
+
+**タグ名を書く場面を問わず（コード・計画・タスクリスト・説明・提案すべて）、必ず先にtag.jsonで存在を確認すること。**
+
+- tag.jsonのパス: `e:\TyranoScript\tyrano_603\TyranoStudio_win_std_v603\resources\app\src\others\tag.json`
+- 確認方法: PowerShellで `$json | ConvertFrom-Json | Select -ExpandProperty PSObject.Properties | Select Name` でタグ名一覧を取得
+- **存在しないタグを提案することは実装ミスと同じ。計画段階でも禁止。**
+
+### このプロジェクトで確認済みの主要タグ（tag.json照合済み）
+
+| 用途 | 正しいタグ | 存在しないタグ（禁止） |
+|---|---|---|
+| 画像アニメーション | `[anim]` `[xanim]` `[kanim]` `[keyframe]` | `[move]` `[animate]` |
+| キャラ移動 | `[chara_move]` | `[move]` |
+| テキスト入力 | `[edit]` | `[input]` |
+| 画面揺れ | `[quake]` `[quake2]` | |
+| カメラ操作 | `[camera]` `[reset_camera]` `[wait_camera]` | |
+| 立ち絵パーツ定義 | `[chara_layer]` | |
+| 立ち絵パーツ切替 | `[chara_part]` | |
+| 立ち絵表情切替 | `[chara_mod]` `[chara_face]` | |
+| 画像表示/消去 | `[image]` `[freeimage]` | |
+| レイヤ設定 | `[layopt]` | |
+| フィルタ | `[filter]` | |
+| 文字速度 | `[configdelay]` | |
+
+---
+
 ## ① 作業開始時の必須確認
 
 **毎回タスク開始前に以下を実施すること：**
 
 1. `docs/scenario_structure.md` を読む（分岐ロジック・変数の仕様書）
-2. 変更するタグの公式仕様を確認する
-   - 公式サイト: **https://tyrano.jp/**
-   - タグリファレンス: 公式サイト内「タグリファレンス」を確認すること
+2. タグを書く・提案する前に必ずtag.jsonで存在確認する（上記ルール参照）
 3. このファイルを最後まで読む
 
 ---
@@ -71,7 +96,7 @@
 
 ## ⑤ メッセージレイヤーとテーマプラグイン
 
-- `first.ks` で `[plugin name="theme_kopanda_20" font_color="0xECECF6" name_color="0x9A9BDD" font_color2="0xC4C8DE"]` を読み込み済み
+- `first.ks` で `[plugin name="theme_kopanda_20"]` を読み込み済み（カラー等はプラグイン側で設定）
 - **メッセージウィンドウ・フォント色・名前エリアはすべてプラグインが管理する**
 - `00_init.ks` で `[position]` `[font]` `[deffont]` `[ptext]` を重複設定しないこと（テーマを上書きしてしまう）
 - `first.ks` でタイトル中は `[layopt layer="message" visible="false"]` で非表示

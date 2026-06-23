@@ -12,7 +12,9 @@
 ;ゲームで必ず必要な初期化処理はこのファイルに記述するのがオススメ
 
 ;TIPプラグイン
-[plugin name=tip]
+[plugin name="tip"]
+;テーマ一括変換
+[plugin name="theme_kopanda_20"]
 
 ;メッセージボックスは非表示
 [layopt layer="message" visible="false"]
