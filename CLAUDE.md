@@ -19,7 +19,7 @@
 |---|---|---|
 | 画像アニメーション | `[anim]` `[xanim]` `[kanim]` `[keyframe]` | `[move]` `[animate]` |
 | キャラ移動 | `[chara_move]` | `[move]` |
-| テキスト入力 | `[edit]` | `[input]` |
+| テキスト入力 | `[edit]` `[commit]` | `[input]` |
 | 画面揺れ | `[quake]` `[quake2]` | |
 | カメラ操作 | `[camera]` `[reset_camera]` `[wait_camera]` | |
 | 立ち絵パーツ定義 | `[chara_layer]` | |
@@ -29,6 +29,9 @@
 | レイヤ設定 | `[layopt]` | |
 | フィルタ | `[filter]` | |
 | 文字速度 | `[configdelay]` | |
+| 条件分岐 | `[if]` `[elsif]` `[else]` `[endif]` | `[elseif]`（スペルが違う・存在しない） |
+| SE再生 | `[playse]` | `[se]` |
+| BGM再生/停止 | `[playbgm]` `[stopbgm]` `[fadeinbgm]` `[fadeoutbgm]` `[pausebgm]` `[resumebgm]` | `[bgm]` |
 
 ---
 
