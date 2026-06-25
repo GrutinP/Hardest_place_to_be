@@ -9,12 +9,29 @@
 ;コンフィグ、CG、回想モードを使う場合は必須
 [call storage="tyrano.ks"]
 
-;ゲームで必ず必要な初期化処理はこのファイルに記述するのがオススメ
-
 ;TIPプラグイン
 [plugin name="tip"]
 ;テーマ一括変換
 [plugin name="theme_kopanda_20"]
+;タップエフェクト
+[plugin name="tap_effect"]
+
+;雨エフェクト用CSS
+[loadcss file="./css/rain.css"]
+;プロジェクト共通マクロ
+[call storage="scene/macro.ks"]
+
+
+
+
+
+
+
+
+
+
+
+
 
 ;メッセージボックスは非表示
 [layopt layer="message" visible="false"]

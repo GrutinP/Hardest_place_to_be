@@ -1,0 +1,34 @@
+/* 雨エフェクト用CSS */
+
+/* 落下アニメーション定義
+   translateY: 縦方向の移動距離
+     from の -60px = 画面上端より少し上からスタート
+     to の 800px = 画面下端より下まで落とす */
+@keyframes my-rain-fall {
+  from { transform: translateY(-60px); }
+  to   { transform: translateY(800px); }
+}
+
+/* 雨粒を全部まとめる透明な箱
+   pointer-events:none → クリックを無視する（ゲーム操作を邪魔しない）
+   transform:rotate(5deg) → 箱ごと傾けて中の雨粒を斜めに落とす
+     マイナスにすると逆向き。数値を大きくすると横殴りの雨になる */
+.my-rain-container {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  transform: rotate(5deg);
+}
+
+/* 雨粒1本の見た目（全本共通）
+   width:4px → 雨粒の太さ。細くするほど繊細な雨になる
+   background:linear-gradient → 上(透明)→下(水色半透明)のグラデーション
+     rgba の最後の数字が不透明度（0〜1）。大きくするほど濃くなる */
+.my-rain {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, transparent, rgba(180, 210, 255, 0.6));
+  animation: my-rain-fall 1s linear infinite;
+}

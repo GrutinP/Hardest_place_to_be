@@ -132,7 +132,6 @@
     f.if_chara_stucked = 0 // 立ち絵汚れパーツ：葉・枝（3つめの不幸後で1）
 [endscript]
 
-
 [jump storage="scene/01_avan.ks"]
 
 [s]

@@ -5,9 +5,37 @@
 
 [cm]
 
-; 名前入力
-あなたの 名前を 入力してください
 
+
+
+
+;テスト
+/*
+[cm]
+[clearstack]
+;[bg storage="bg_ame_michi.jpg" time="300"]
+[start_walk_bg]
+[show_letterbox]
+[layopt layer="message0" visible="false"]
+[show_rain]
+[chara_part name="ajisai_n" umbrella="red" base="normal" eyebrow="normal" eye="normal" mouth="normal" effect="none" bad01="0" bad02="0" bad03="0"]
+;[chara_show name="ajisai_n" layer="3" time="500"]
+[show_ajisai_n time="500"]
+[s]
+*/
+
+
+
+
+
+
+
+
+; 名前入力
+あなたの 名前を 入力してください[r]
+全半角10文字まで
+
+; 0文字だったらやりなおし
 [edit name="f.p_name" left="390" top="270" width="500" height="52" size="26" maxchars="10" autocomplete="false"]
 [glink text="決定" size="26" color="white" x="605" y="350" width="130" target="*name_done" cm="false"]
 [s]
