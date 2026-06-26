@@ -27,9 +27,9 @@
 
 
 
-
-
-
+[popopo type="none"]
+[popopo type="file" time="10" tailtime="30" mode="everyone" storage="popopo_custom.mp3" buf="1"]
+; mode="interval" interval="50" 
 
 ; 名前入力
 あなたの 名前を 入力してください[r]
@@ -45,7 +45,7 @@
 [cm]
 
 ; 星座選択UI
-[layopt layer="message0" visible="false"]
+;[layopt layer="message0" visible="false"]
 
 あなたの 星座を 選択してください
 

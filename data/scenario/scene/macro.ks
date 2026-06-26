@@ -6,6 +6,7 @@
 ;   演出系:
 ;     [start_walk_bg]                    横スクロール背景開始
 ;     [stop_walk_bg storage="" time=""]  横スクロール背景停止→静止背景切替
+;     [freeze_walk_bg]                   横スクロール背景をその場で静止（freeはしない）
 ;     [show_letterbox]                   黒帯表示（シネマスコープ）
 ;     [hide_letterbox]                   黒帯非表示
 ;     [clear_walk_effects]               演出レイヤー全消し

@@ -88,7 +88,7 @@
 
 // ◆ 文字表示スピード
 // delay で指定した場合はその値が優先されます。resetdelayで元に戻ります
-;chSpeed = 30;
+;chSpeed = 50;
 
 // ◆ 文字表示スピード (ミリ秒/文字)（未実装）
 ;chSpeeds.fast = 10; // 「高速」文字表示スピード
@@ -99,7 +99,7 @@
 // テキストの表示演出を指定できます。noneを指定すると演出が無効になります。
 // 指定できる名前
 // fadeIn/fadeInDown/fadeInLeft/fadeInRight/fadeInUp/rotateIn/zoomIn/slideIn/bounceIn/vanishIn/puffIn/rollIn/none
-;defaultChEffect = none;
+;defaultChEffect = fadeInDown;
 
 // ◆ 文字表示の演出スピード
 // defaultChAnimの演出が有効な場合、演出にかける時間を指定します。sは秒を表します。

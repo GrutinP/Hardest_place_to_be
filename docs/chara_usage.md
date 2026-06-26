@@ -1,3 +1,5 @@
+← [README](README.md)
+
 # アジサイ キャラ指定メモ
 
 > 00_init.ks で定義済みのキャラ・パーツ一覧と、シナリオで使う書き方のリファレンス。
@@ -51,11 +53,12 @@
 
 ### umbrella（傘） ※ ajisai_n のみ
 
-| id | 内容 |
-|----|------|
-| `none` | 傘なし（透明） |
-| `green` | 緑の傘 |
-| `red` | 赤の折り畳み傘 |
+| id | 内容 | 使用シーン |
+|----|------|---|
+| `none` | 傘なし（透明） | - |
+| `green` | 緑の傘 | 03_prologue など |
+| `green_broken` | 緑の傘（壊れ） | 03 / 一部ED |
+| `red` | 赤の折り畳み傘 | 04_bad01 〜 |
 
 ```
 [chara_part name="ajisai_n" umbrella="green"]

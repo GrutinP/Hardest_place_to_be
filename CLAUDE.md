@@ -4,6 +4,7 @@
 > TyranoScriptの仕様を把握せずに作業を開始して実装ミスを繰り返すことは許可されていない。
 > **仕様がわからないときはユーザーに聞く前にtag.jsonや既存ファイルを自分で調べて考えること。**
 > **ファイルを編集する前に必ずReadツールで対象ファイルを読むこと。読まずに編集しない。**
+> **シナリオ台詞を実装するときは必ずスプレッドシート（Google Drive）から台本を取得すること。あらすじや既存ファイルから台詞を推測・創作することは絶対禁止。**
 
 ---
 
@@ -111,6 +112,8 @@
 
 ## ⑥ このプロジェクトの主要変数
 
+**ゲーム進行フラグ**
+
 | 変数 | 型 | 用途 |
 |---|---|---|
 | `f.p_name` | string | プレイヤー名（01_avanで入力） |
@@ -120,6 +123,15 @@
 | `f.if_chara_splashed` | 0/1 | 水浸しパーツ表示フラグ（③A選択で1） |
 | `f.if_chara_stomped` | 0/1 | 犬足跡パーツ表示フラグ（⑥A選択で1） |
 | `f.if_chara_stucked` | 0/1 | 葉・枝パーツ表示フラグ（⑧以降で1） |
+
+**魚座分岐制御（01_avanの星座選択後に一括設定）**
+
+| 変数 | 型 | 魚座 | それ以外 | 使用場所 |
+|---|---|---|---|---|
+| `f.c_name` | string | `"アジサイ"` | `"＊"` | `#&f.c_name`（アジサイのセリフ前） |
+| `f.ch_reflect` | string | `"true"` | `"false"` | `[chara_show reflect="&f.ch_reflect"]` |
+| `f.rain_deg` | number | `-5` | `5` | `[show_rain]` 内のdeg値 |
+| `f.walk_keyframe` | string | `"walk_bg_scroll_rev"` | `"walk_bg_scroll"` | `[xanim keyframe="&f.walk_keyframe"]` |
 
 ---
 
@@ -139,9 +151,11 @@
 
 ## ⑧ キャラクター設定
 
-- name: `ajisai`、jname: `＊`（`#ajisai` でセリフ時に名前欄に ＊ が出る）
+- 立ち絵は `[chara_layer]` によるパーツ合成方式（`[chara_face]` は使用しない）
+- 通常立ち絵: `ajisai_n`、歩き立ち絵: `ajisai_w`（jname はどちらも `＊`）
+- **セリフの話者指定は `#&f.c_name` を使う**（`#ajisai_n` は使わない。魚座分岐で名前が変わるため）
 - 画像パス: `data/fgimage/chara/ajisai/`
-- face定義（00_init.ksで定義済み）: `red`, `wet`, `wet_dog`, `dog`, `leaves`, `umbrella_broken`, `umbrella_red`
+- パーツ構成: umbrella / base / eyebrow / eye / mouth / effect / bad01 / bad02 / bad03（詳細は `docs/scenario_structure.md`）
 
 ---
 

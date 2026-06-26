@@ -14,6 +14,8 @@
 [bg storage="bg_ame_yane.jpg" time="500"]
 [show_rain]
 
+#&f.p_name
+
 ; プレイヤー（内心）
 （ひどい雨だ…………）[p]
 （動けそうに無い）[p]
@@ -21,6 +23,7 @@
 
 ; アジサイ（オフスクリーン・声のみ）
 ;[playse storage="TODO_voice_ajisai_off_01.ogg"]
+#ajisai_n
 あの[p]
 
 
@@ -40,10 +43,10 @@
 
 
 ; 立ち絵: 初期パーツ設定（傘=赤、表情=通常、汚れなし）
-[chara_part name="ajisai_n" umbrella="red" base="normal" eyebrow="normal" eye="normal" mouth="normal" effect="none" bad01="0" bad02="0" bad03="0"]
+[chara_part name="ajisai_n" umbrella="green" base="normal" eyebrow="normal" eye="normal" mouth="normal" effect="none" bad01="0" bad02="0" bad03="0"]
 ;[chara_show name="ajisai_n" time="500"]
 [show_ajisai_n time="500"]
-
+[wait time="2000"]
 
 ;
 
@@ -52,7 +55,7 @@
 #ajisai_n
 ;[playse storage="TODO_voice_ajisai_02.ogg"]
 傘 忘れたの？
-
+[wait time="1000"]
 
 ; 選択肢①（影響なし）: 傘を忘れた理由
 [glink text="本当に降るとは 思わなくて" size="28" color="white" x="280" y="220" width="720" target="*choice1_cont"]
@@ -336,7 +339,7 @@
 
 ; アジサイ: 傘を貸そうとして途中で止まる（眉=通常、目=通常、口=うろたえ）
 ; ※自分も11番目と言ったばかりなのでラッキーアイテムを出せない
-[chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="urotatae" effect="none"]
+[chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="urotae" effect="none"]
 #ajisai_n
 ;[playse storage="TODO_voice_ajisai_30.ogg"]
 よ よ よかったら 傘 もう一本 あまっ[p]
@@ -371,6 +374,9 @@
 #ajisai_n
 ;[playse storage="TODO_voice_ajisai_35.ogg"]
 …………甘納豆
+
+
+[wait time="500"]
 
 
 ; 選択肢②（影響なし）: 甘納豆エピソード
@@ -437,7 +443,7 @@
 
 
 ; アジサイ: 自分でも引く（眉=困り、目=ジト目、口=うろたえ、エフェクト=赤面弱）
-[chara_part name="ajisai_n" eyebrow="komari" eye="jito" mouth="urotatae" effect="akagao_weak"]
+[chara_part name="ajisai_n" eyebrow="komari" eye="jito" mouth="urotae" effect="akagao_weak"]
 #ajisai_n
 ;[playse storage="TODO_voice_ajisai_44.ogg"]
 …………はぁ[p]

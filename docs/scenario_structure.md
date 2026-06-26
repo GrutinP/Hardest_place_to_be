@@ -74,22 +74,28 @@
 
 ## 変数
 
-| 変数名 | 型 | 用途 |
-|---|---|---|
-| `f.p_name` | string | プレイヤーの名前（名前入力） |
-| `f.p_sign` | number | プレイヤーの星座番号（1〜12） |
-| `f.c_sign` | number | アジサイの星座番号（初期値12=魚座） |
-| `f.chara_saved` | number | アジサイがひどい目にあった回数（ED分岐の判定に使用、最大3） |
+### ゲーム進行・フラグ
 
-**立ち絵汚れパーツ切り替え用変数**（立ち絵実装時に追加予定）
+| 変数名 | 型 | 初期値 | 用途 |
+|---|---|---|---|
+| `f.p_name` | string | `''` | プレイヤーの名前（01_avanで入力） |
+| `f.p_sign` | number | `0` | プレイヤーの星座番号（1〜12） |
+| `f.c_sign` | number | `12` | アジサイの星座番号（魚座=12。p_sign==12なら6に変更） |
+| `f.chara_saved` | number | `0` | アジサイがひどい目にあった回数（最大3、ED分岐に使用） |
+| `f.if_chara_splashed` | 0/1 | `0` | 水浸しパーツ表示（③A選択で1） |
+| `f.if_chara_stomped` | 0/1 | `0` | 犬の足跡パーツ表示（⑥A選択で1） |
+| `f.if_chara_stucked` | 0/1 | `0` | 葉・枝パーツ表示（3つめの不幸で1） |
 
-| 変数名 | 型 | 用途 |
-|---|---|---|
-| `f.if_chara_splashed` | 0/1 | 水浸しパーツ表示（③A選択で1） |
-| `f.if_chara_stomped` | 0/1 | 犬の足跡パーツ表示（⑥A選択で1） |
-| `f.if_chara_stucked` | 0/1 | 葉・枝パーツ表示（3つめの不幸で1） |
+### 魚座分岐制御変数（01_avanの星座選択後に一括設定）
 
-※`f.chara_saved`（回数）とは独立。どの汚れが乗っているかを個別に管理する。
+| 変数名 | 型 | 魚座(p_sign==12) | それ以外 | 用途 |
+|---|---|---|---|---|
+| `f.c_name` | string | `"アジサイ"` | `"＊"` | 会話中の名前ボックス表示。`#&f.c_name` で使用 |
+| `f.ch_reflect` | string | `"true"` | `"false"` | 立ち絵の左右反転。`[chara_show reflect="&f.ch_reflect"]` で使用 |
+| `f.rain_deg` | number | `-5` | `5` | 雨アニメーションのdeg値。プレイヤーが魚座なら逆方向 |
+| `f.walk_keyframe` | string | `"walk_bg_scroll_rev"` | `"walk_bg_scroll"` | 歩き背景のキーフレーム名。`[xanim keyframe="&f.walk_keyframe"]` で使用 |
+
+※`f.chara_saved`（回数）と汚れパーツ変数は独立。どの汚れが乗っているかを個別に管理する。
 
 ---
 
@@ -165,13 +171,36 @@
 
 ---
 
-## 未着手・要対応
+← [README](README.md)
 
-- [ ] 各.ksファイルへのシナリオテキスト実装（台本はドキュメントに完成済み）
-- [ ] 立ち絵ダメージ変数の追加と差分切り替え処理
-- [ ] f.chara_saved の加算処理を各ksに記述
-- [ ] 17_quiz の分岐ロジック実装
-- [ ] 20_gate_common のED分岐ロジック実装
-- [ ] 01_avan の名前・星座入力UI
-- [ ] 魚座選択時の立ち絵左右反転処理
-- [ ] アジサイの名前（ゲーム中では言及なし。TIPで管理？）
+---
+
+## 魚座分岐の実装メモ
+
+### 01_avan 星座選択後に以下を一括設定する
+
+```ks
+; 魚座分岐変数を一括設定
+[eval exp="f.c_name       = (f.p_sign==12) ? 'アジサイ' : '＊'"]
+[eval exp="f.ch_reflect   = (f.p_sign==12) ? 'true' : 'false'"]
+[eval exp="f.rain_deg     = (f.p_sign==12) ? -5 : 5"]
+[eval exp="f.walk_keyframe = (f.p_sign==12) ? 'walk_bg_scroll_rev' : 'walk_bg_scroll'"]
+```
+
+### 使用箇所
+
+| 変数 | 使い方 |
+|---|---|
+| `f.c_name` | アジサイのセリフ直前に `#&f.c_name` と書く（通常の `#ajisai_n` は使わない） |
+| `f.ch_reflect` | `[chara_show name="ajisai_n" layer="3" reflect="&f.ch_reflect"]` |
+| `f.rain_deg` | `[show_rain]` の実装内でdeg値に `&f.rain_deg` を渡す |
+| `f.walk_keyframe` | `[xanim name="walk_bg_loop" keyframe="&f.walk_keyframe" ...]` |
+
+### macro.ks に追加が必要なもの
+
+- `walk_bg_scroll_rev` キーフレーム（x=0 → x=2560 の逆スクロール）
+- `show_rain` マクロをdeg変数対応に変更
+
+---
+
+← 作業タスクは [tasks.md](tasks.md) で管理

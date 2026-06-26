@@ -24,6 +24,7 @@
 ; 傘（キャラの後ろ zindex=0）
 [chara_layer name="ajisai_n" part="umbrella" id="none"  storage="chara/ajisai/kasa_none.png"  zindex="0"]
 [chara_layer name="ajisai_n" part="umbrella" id="green" storage="chara/ajisai/kasa_green.png" zindex="0"]
+[chara_layer name="ajisai_n" part="umbrella" id="green_broken" storage="chara/ajisai/kasa_green_broken.png" zindex="0"]
 [chara_layer name="ajisai_n" part="umbrella" id="red"   storage="chara/ajisai/kasa_red.png"   zindex="0"]
 
 ; ベース（キャラ本体 zindex=1）
@@ -48,7 +49,7 @@
 [chara_layer name="ajisai_n" part="mouth" id="i"        storage="chara/ajisai/kuchi_i.png"        zindex="4"]
 [chara_layer name="ajisai_n" part="mouth" id="x"        storage="chara/ajisai/kuchi_x.png"        zindex="4"]
 [chara_layer name="ajisai_n" part="mouth" id="he"       storage="chara/ajisai/kuchi_he.png"       zindex="4"]
-[chara_layer name="ajisai_n" part="mouth" id="urotatae" storage="chara/ajisai/kuchi_urotatae.png" zindex="4"]
+[chara_layer name="ajisai_n" part="mouth" id="urotae" storage="chara/ajisai/kuchi_urotae.png" zindex="4"]
 [chara_layer name="ajisai_n" part="mouth" id="v"        storage="chara/ajisai/kuchi_v.png"        zindex="4"]
 [chara_layer name="ajisai_n" part="mouth" id="mukure"   storage="chara/ajisai/kuchi_mukure.png"   zindex="4"]
 
@@ -98,7 +99,7 @@
 [chara_layer name="ajisai_w" part="mouth" id="i"        storage="chara/ajisai/kuchi_i.png"        zindex="4"]
 [chara_layer name="ajisai_w" part="mouth" id="x"        storage="chara/ajisai/kuchi_x.png"        zindex="4"]
 [chara_layer name="ajisai_w" part="mouth" id="he"       storage="chara/ajisai/kuchi_he.png"       zindex="4"]
-[chara_layer name="ajisai_w" part="mouth" id="urotatae" storage="chara/ajisai/kuchi_urotatae.png" zindex="4"]
+[chara_layer name="ajisai_w" part="mouth" id="urotae" storage="chara/ajisai/kuchi_urotae.png" zindex="4"]
 [chara_layer name="ajisai_w" part="mouth" id="v"        storage="chara/ajisai/kuchi_v.png"        zindex="4"]
 [chara_layer name="ajisai_w" part="mouth" id="mukure"   storage="chara/ajisai/kuchi_mukure.png"   zindex="4"]
 

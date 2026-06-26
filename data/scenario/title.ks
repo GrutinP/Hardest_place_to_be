@@ -16,6 +16,7 @@
 
 [glink text="はじめから" size="36" color="white" x="400" y="280" width="480" target="*gamestart"]
 [glink text="つづきから" size="36" color="white" x="400" y="380" width="480" target="*loadgame"]
+[glink text="コンフィグ" size="36" color="white" x="400" y="480" width="480" target="*config"]
 [s]
 
 *gamestart
@@ -28,3 +29,7 @@ TYRANO.kag.saveLoad("load");
 [endscript]
 
 [s]
+
+*config
+[sleepgame storage="../others/plugin/theme_kopanda_20/config.ks"]
+[jump target="*start"]
