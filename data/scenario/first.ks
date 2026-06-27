@@ -17,7 +17,7 @@
 [plugin name="tap_effect"]
 
 ;雨エフェクト用CSS
-[loadcss file="./css/rain.css"]
+[loadcss file="./tyrano/css/rain.css"]
 ;プロジェクト共通マクロ
 [call storage="scene/macro.ks"]
 

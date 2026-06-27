@@ -23,11 +23,12 @@
 
 ; アジサイ（オフスクリーン・声のみ）
 ;[playse storage="TODO_voice_ajisai_off_01.ogg"]
-#ajisai_n
+#&f.c_name
 あの[p]
 
 
 ; プレイヤー（内心）
+#&f.p_name
 （？）[p]
 
 
@@ -37,6 +38,8 @@
 ;[wait time="1500"]
 ;[freeimage layer="0"]
 
+;雨消し
+[hide_rain]
 
 ; 背景切り替え: 軒下 → 街中、立ち絵と同時表示
 [bg storage="bg_ame_michi.jpg" time="500"]
@@ -52,7 +55,7 @@
 
 ; アジサイ: 傘 忘れたの？（眉=通常、目=通常、口=O）
 [chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="o" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_02.ogg"]
 傘 忘れたの？
 [wait time="1000"]
@@ -68,21 +71,21 @@
 
 ; アジサイ: そうなの（眉=困り、目=通常、口=笑み）
 [chara_part name="ajisai_n" eyebrow="komari" eye="normal" mouth="emi" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_03.ogg"]
 そうなの[p]
 
 
 ; アジサイ: それで 雨宿り してたんだね（眉=困り、目=目閉じ、口=O）
 [chara_part name="ajisai_n" eyebrow="komari" eye="toji" mouth="o" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_04.ogg"]
 それで 雨宿り してたんだね[p]
 
 
 ; アジサイ: 沈黙・赤面（眉=通常、目=驚き、口=ｘ、エフェクト=赤面弱）
 [chara_part name="ajisai_n" eyebrow="normal" eye="odoroki" mouth="x" effect="akagao_weak"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_05.ogg"]
 ……………………[p]
 
@@ -91,13 +94,14 @@
 
 
 ; プレイヤー（内心）
+#&f.p_name
 （……………………）[p]
 （………… 誰？）[p]
 
 
 ; アジサイ: 話し相手の申し出（眉=通常、目=驚き、口=▽、エフェクト=赤面強）
 [chara_part name="ajisai_n" eyebrow="normal" eye="odoroki" mouth="v" effect="akagao_strong"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_07.ogg"]
 よ よ よ よかったら 話し相手 してあげるよっ[p]
 
@@ -107,7 +111,7 @@
 
 ; アジサイ: 申し出を取り繕う（眉=怒り、目=目閉じ笑み、口=笑み、エフェクト=赤面弱）
 [chara_part name="ajisai_n" eyebrow="okori" eye="toji_emi" mouth="emi" effect="akagao_weak"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_09.ogg"]
 いや あなたは 私の話し相手を [r]
 するべきだと思うなぁ うん[p]
@@ -116,7 +120,7 @@
 ; アジサイ: 難解語で誤魔化す（眉=怒り、目=驚き、口=▽、エフェクト=赤面強）
 ; ※傾慕/至誠/挺身/接遇はキャラ演出用語。プレイヤーへの説明なし
 [chara_part name="ajisai_n" eyebrow="okori" eye="odoroki" mouth="v" effect="akagao_strong"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_10.ogg"]
 優しい私の 傾慕と至誠に 挺身して接合しようよ [r]
 うん そうしようっ[p]
@@ -130,13 +134,14 @@
 */
 
 
+#&f.p_name
 ; プレイヤー（内心）: 意味がわからない
 （…………？？？ ケイボ てなに？？？）[p]
 
 
 ; アジサイ: しどろもどろ（眉=困り、目=ジト目、口=へ、エフェクト=汗）
 [chara_part name="ajisai_n" eyebrow="komari" eye="jito" mouth="he" effect="ase"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_11.ogg"]
 えーと えっと ……………………えっとね[p]
 
@@ -146,14 +151,14 @@
 
 ; アジサイ: 話題を変える（眉=通常、目=驚き、口=▽）
 [chara_part name="ajisai_n" eyebrow="normal" eye="odoroki" mouth="v" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_13.ogg"]
 あ！ さっきの話[p]
 
 
 ; アジサイ: 占いを見たと指摘（眉=通常、目=通常、口=笑み）
 [chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="emi" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_14.ogg"]
 本当に降るとは だか 運が悪かった だか [r]
 言ってたじゃん[p]
@@ -161,7 +166,7 @@
 
 ; アジサイ: 朝の占いを見たと確認（眉=通常、目=目閉じ笑み、口=イー）
 [chara_part name="ajisai_n" eyebrow="normal" eye="toji_emi" mouth="i" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_15.ogg"]
 朝の星座占いコーナー 見たんだよね きっと[p]
 
@@ -169,7 +174,7 @@
 ; アジサイ: プレイヤーの星座を言い当てる（眉=困り、目=目閉じ、口=通常）
 ; ※星座ごとにボイス差分あり（02_opening参照）、[p]は分岐の外
 [chara_part name="ajisai_n" eyebrow="komari" eye="toji" mouth="normal" effect="none"]
-#ajisai_n
+#&f.c_name
 [if exp="f.p_sign==1"]
 	;[playse storage="TODO_voice_ajisai_psign16_01.ogg"]
 	あなたってば 『 おひつじ座 』だから………… [r]11番目だったっけ
@@ -211,13 +216,14 @@
 
 
 ; プレイヤー（内心）: この子と以前に話したことがあったか？
+#&f.p_name
 （…………？ …………前に 星座について）[r]
 （この子と話したことが あったのだろうか…………？）[p]
 
 
 ; アジサイ: 不運を認める（眉=困り、目=通常、口=笑み）
 [chara_part name="ajisai_n" eyebrow="komari" eye="normal" mouth="emi" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_17.ogg"]
 ついてないね[p]
 
@@ -225,7 +231,7 @@
 ; アジサイ: 12番目との比較（眉=通常、目=目閉じ、口=O）
 ; ※「ラッキーアーテイム」はキャラの言い間違い
 [chara_part name="ajisai_n" eyebrow="normal" eye="toji" mouth="o" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_18.ogg"]
 だって 12番目はさ ラッキーアーテイムとかいう [r]
 バフアイテムのヒントをもらえるじゃん[p]
@@ -233,18 +239,19 @@
 
 ; アジサイ: 実質最下位の主張（眉=通常、目=通常、口=通常）
 [chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="normal" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_19.ogg"]
 それじゃあ 11番目が 実質の最下位だもの[p]
 
 
 ; プレイヤー（内心）: 沈黙
+#&f.p_name
 （……………………）[p]
 
 
 ; アジサイ: プレイヤーの表情に焦る（眉=怒り、目=驚き、口=笑み、エフェクト=汗）
 [chara_part name="ajisai_n" eyebrow="okori" eye="odoroki" mouth="emi" effect="ase"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_20.ogg"]
 …………あ いや そのぅ[p]
 
@@ -255,7 +262,7 @@
 ; アジサイ: 同じ星座だと嘘をつく（眉=怒り、目=目閉じ笑み、口=▽、エフェクト=赤面弱）
 ; ※プレイヤーの星座と同じだと主張する嘘（カバーストーリー）。星座ごとにボイス差分あり
 [chara_part name="ajisai_n" eyebrow="okori" eye="toji_emi" mouth="v" effect="akagao_weak"]
-#ajisai_n
+#&f.c_name
 [if exp="f.p_sign==1"]
 	;[playse storage="TODO_voice_ajisai_psign22_01.ogg"]
 	わ わ わ わたしも じつは 『 おひつじ座 』 なのでしたー！
@@ -297,7 +304,7 @@
 
 ; アジサイ: 知っていて当然だと言い張る（眉=通常、目=驚き、口=▽、エフェクト=赤面強）
 [chara_part name="ajisai_n" eyebrow="normal" eye="odoroki" mouth="v" effect="akagao_strong"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_23.ogg"]
 だ だ だから あなたの星座のことも知ってたし それが11番目だということを知っていても 何も怪しく ないよねー？？？[p]
 ;自動改行、早口
@@ -305,7 +312,7 @@
 
 ; アジサイ: 開き直り（眉=困り、目=目閉じ、口=むくれ）
 [chara_part name="ajisai_n" eyebrow="komari" eye="toji" mouth="mukure" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_24.ogg"]
 ……………………[p]
 
@@ -314,12 +321,13 @@
 
 
 ; プレイヤー（内心）: 雨が続く
+#&f.p_name
 （…………雨が弱まる気配はない…………）[p]
 
 
 ; アジサイ: 気まずい沈黙（眉=通常、目=通常、口=通常）
 [chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="normal" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_26.ogg"]
 ……………………[p]
 
@@ -329,7 +337,7 @@
 
 ; アジサイ: 悶々とした沈黙（眉=困り、目=ジト目、口=むくれ、エフェクト=赤面弱）
 [chara_part name="ajisai_n" eyebrow="komari" eye="jito" mouth="mukure" effect="akagao_weak"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_28.ogg"]
 ……………………[p]
 
@@ -340,14 +348,14 @@
 ; アジサイ: 傘を貸そうとして途中で止まる（眉=通常、目=通常、口=うろたえ）
 ; ※自分も11番目と言ったばかりなのでラッキーアイテムを出せない
 [chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="urotae" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_30.ogg"]
 よ よ よかったら 傘 もう一本 あまっ[p]
 
 
 ; アジサイ: 口が止まる（眉=通常、目=驚き、口=ｘ）
 [chara_part name="ajisai_n" eyebrow="normal" eye="odoroki" mouth="x" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_31.ogg"]
 あ[p]
 
@@ -356,12 +364,13 @@
 
 
 ; プレイヤー（内心）
+#&f.p_name
 （…………？）[p]
 
 
 ; アジサイ: 言いかけた言葉を誤魔化す（眉=困り、目=目閉じ笑み、口=O）
 [chara_part name="ajisai_n" eyebrow="komari" eye="toji_emi" mouth="o" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_33.ogg"]
 あま あま[p]
 
@@ -371,7 +380,7 @@
 
 ; アジサイ: 甘納豆と言い切る（眉=怒り、目=驚き、口=▽）
 [chara_part name="ajisai_n" eyebrow="okori" eye="odoroki" mouth="v" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_35.ogg"]
 …………甘納豆
 
@@ -391,14 +400,14 @@
 
 ; アジサイ: 間（眉=困り、目=目閉じ、口=へ）
 [chara_part name="ajisai_n" eyebrow="komari" eye="toji" mouth="he" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_36.ogg"]
 ……………………[p]
 
 
 ; アジサイ: 反応に感想（眉=通常、目=通常、口=通常）
 [chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="normal" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_37.ogg"]
 今のはひどかったね [r]
 でもおかげで 冷静になれた[p]
@@ -406,28 +415,28 @@
 
 ; アジサイ: 相合傘を提案（眉=通常、目=通常、口=笑み）
 [chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="emi" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_38.ogg"]
 傘に入れてあげるから 一緒に駅まで行こう[p]
 
 
 ; アジサイ: この雨はやまないと予言（眉=困り、目=目閉じ、口=イー）
 [chara_part name="ajisai_n" eyebrow="komari" eye="toji" mouth="i" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_39.ogg"]
 11番目だし きっとヤまないよ この雨は さ[p]
 
 
 ; アジサイ: 出発を促す（眉=通常、目=目閉じ笑み、口=笑み）
 [chara_part name="ajisai_n" eyebrow="normal" eye="toji_emi" mouth="emi" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_40.ogg"]
 観念して ほら 行こ 11番目さん[p]
 
 
 ; アジサイ: 沈黙（眉=通常、目=通常、口=通常）
 [chara_part name="ajisai_n" eyebrow="normal" eye="normal" mouth="normal" effect="none"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_41.ogg"]
 ……………………[p]
 
@@ -437,14 +446,14 @@
 
 ; アジサイ: テンションが上がりすぎて自爆（眉=怒り、目=驚き、口=▽、エフェクト=赤面強）
 [chara_part name="ajisai_n" eyebrow="okori" eye="odoroki" mouth="v" effect="akagao_strong"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_43.ogg"]
 わ わ わたしも11番目だったっ！ あはははハハハはははっ[p]
 
 
 ; アジサイ: 自分でも引く（眉=困り、目=ジト目、口=うろたえ、エフェクト=赤面弱）
 [chara_part name="ajisai_n" eyebrow="komari" eye="jito" mouth="urotae" effect="akagao_weak"]
-#ajisai_n
+#&f.c_name
 ;[playse storage="TODO_voice_ajisai_44.ogg"]
 …………はぁ[p]
 
@@ -453,8 +462,8 @@
 ; 暗転
 [bg storage="black.jpg" time="500" wait="false"]
 
-; 立ち絵を消去
-[chara_hide name="ajisai_n" time="300"]
+; 非表示
+[chara_hide name="ajisai_n" layer="3" time="500"]
 
 ; BGM フェードアウト（雨の音）
 ;[fadeoutbgm time="2000"]

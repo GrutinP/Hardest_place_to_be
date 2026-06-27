@@ -1,0 +1,115 @@
+{
+  "TyranoScript syntax.plugin.parameter": {
+    "tap_effect_set": {
+      "name": "tap_effect_set",
+      "description": "tap_effect plugin tag",
+      "parameters": [
+        {
+          "name": "type",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "figure",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "ratio",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "border_color",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "border_width",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "bg_none",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "bg_color",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "pos_start",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "pos_end",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "count_min",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "count_max",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "size_min",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "size_max",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "duration",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "start_delay",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "delete_delay",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "delete_time",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "delete_type",
+          "required": false,
+          "description": ""
+        }
+      ]
+    },
+    "tap_effect_start": {
+      "name": "tap_effect_start",
+      "description": "tap_effect plugin tag",
+      "parameters": []
+    },
+    "tap_effect_stop": {
+      "name": "tap_effect_stop",
+      "description": "tap_effect plugin tag",
+      "parameters": []
+    },
+    "tap_effect_restore": {
+      "name": "tap_effect_restore",
+      "description": "tap_effect plugin tag",
+      "parameters": []
+    }
+  }
+}

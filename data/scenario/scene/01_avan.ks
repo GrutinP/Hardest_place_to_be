@@ -132,6 +132,12 @@
 ; プレイヤーが魚座(12)ならキャラを乙女座(6)に変更
 [eval exp="f.c_sign = (f.p_sign==12) ? 6 : 12"]
 
+; 魚座分岐制御変数（一括設定）
+[eval exp="f.c_name        = (f.p_sign==12) ? 'アジサイ' : '＊'"]
+[eval exp="f.ch_reflect    = (f.p_sign==12) ? 'true' : 'false'"]
+[eval exp="f.rain_deg      = (f.p_sign==12) ? -5 : 5"]
+[eval exp="f.walk_keyframe = (f.p_sign==12) ? 'walk_bg_scroll_rev' : 'walk_bg_scroll'"]
+
 [bg storage="black.jpg" time="500"]
 [wait time="200"]
 

@@ -131,6 +131,11 @@
     f.if_chara_splashed = 0 // 立ち絵汚れパーツ：水浸し（③A選択で1）
     f.if_chara_stomped = 0 // 立ち絵汚れパーツ：犬の足跡（⑥A選択で1）
     f.if_chara_stucked = 0 // 立ち絵汚れパーツ：葉・枝（3つめの不幸後で1）
+    // 魚座分岐制御（01_avanの星座選択後に上書き）
+    f.c_name = '＊'           // アジサイのセリフ前の名前表示。魚座なら'アジサイ'、それ以外は'＊'（名前非表示）
+    f.ch_reflect = 'false'    // 立ち絵の左右反転。魚座なら'true'（鏡像になる）
+    f.rain_deg = 5            // 雨の傾き方向（deg）。魚座なら-5で逆方向
+    f.walk_keyframe = 'walk_bg_scroll' // 歩き背景のスクロール方向。魚座なら'walk_bg_scroll_rev'で逆
 [endscript]
 
 [jump storage="scene/01_avan.ks"]

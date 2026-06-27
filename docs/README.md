@@ -9,6 +9,7 @@
 | ファイル | 内容 |
 |---|---|
 | [scenario_structure.md](scenario_structure.md) | シナリオ構成・分岐ロジック・変数一覧・選択肢・ED条件・魚座分岐仕様 |
+| [scenario_coding_guide.md](scenario_coding_guide.md) | .ks ファイルの書き方コードスニペット集（台詞・キャラ・マクロ・変数の実装例） |
 
 ## 演出・キャラ
 
@@ -31,3 +32,4 @@
 | ファイル | 内容 |
 |---|---|
 | [tasks.md](tasks.md) | フェーズ別作業タスクリスト（進捗管理） |
+| [roadmap.md](roadmap.md) | 完成までの開発フェーズ・優先順位・依存関係 |
