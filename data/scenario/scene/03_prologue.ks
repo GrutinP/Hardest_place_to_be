@@ -7,7 +7,7 @@
 
 
 ; BGM: 雨の音（ループ）
-;[playbgm storage="TODO_bgm_ame.ogg" loop="true" time="2000"]
+[fadeinbgm storage="bgm_ame.wav" loop="true" time="2000"]
 
 
 ; 明転（軒下+雨の背景へ）
@@ -45,7 +45,8 @@
 [bg storage="bg_ame_michi.jpg" time="500"]
 
 
-; 立ち絵: 初期パーツ設定（傘=赤、表情=通常、汚れなし）
+; ★ 傘パーツ: umbrella="green"（緑の傘）← 設定済み
+; 立ち絵: 初期パーツ設定（傘=緑、表情=通常、汚れなし）
 [chara_part name="ajisai_n" umbrella="green" base="normal" eyebrow="normal" eye="normal" mouth="normal" effect="none" bad01="0" bad02="0" bad03="0"]
 ;[chara_show name="ajisai_n" time="500"]
 [show_ajisai_n time="500"]
@@ -122,7 +123,7 @@
 [chara_part name="ajisai_n" eyebrow="okori" eye="odoroki" mouth="v" effect="akagao_strong"]
 #&f.c_name
 ;[playse storage="TODO_voice_ajisai_10.ogg"]
-優しい私の 傾慕と至誠に 挺身して接合しようよ [r]
+優しい私の [ruby text="けい"]傾[ruby text="ぼ"]慕と[ruby text="し"]至[ruby text="せい"]誠に [ruby text="てい"]挺[ruby text="しん"]身して[ruby text="せつ"]接[ruby text="ごう"]合しようよ [r]
 うん そうしようっ[p]
 
 /*
@@ -466,7 +467,7 @@
 [chara_hide name="ajisai_n" layer="3" time="500"]
 
 ; BGM フェードアウト（雨の音）
-;[fadeoutbgm time="2000"]
+[fadeoutbgm time="2000"]
 
 [wait time="300"]
 

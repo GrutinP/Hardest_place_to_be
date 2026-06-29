@@ -7,11 +7,11 @@
 [cm]
 
 ; テレビ画面に切り替え（黒から明転、0.5秒）
-;[playse storage="TODO_se_tv_on.ogg"]
+[playse storage="se_tv_on.wav"]
 [bg storage="bg_tv.jpg" time="500"]
 
 ; テレビ番組の雰囲気BGM（ループ再生）
-;[playbgm storage="TODO_bgm_tv.ogg" loop="true"]
+[playbgm storage="bgm_tv.wav" loop="true"]
 
 /*
 ; ---- 10番目のアナウンス（ダミーテキスト。ボイス収録時の前フリ用） ----
@@ -106,7 +106,7 @@
 
 ; テレビを消す演出（SE→黒→暗転）
 [cm]
-;[playse storage="TODO_se_tv_off.ogg"]
+[playse storage="se_tv_off_.wav"]
 [bg storage="black.jpg" time="500"]
 [fadeoutbgm time="1000"]
 ; 暗転が落ち着くまで少し待ってから次シーンへ

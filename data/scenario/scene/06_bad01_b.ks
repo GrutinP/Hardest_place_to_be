@@ -14,7 +14,7 @@
 ; TODO 画像 水しぶき 消去
 
 ; 通常立ち絵
-[chara_part name="ajisai_n" base="normal" eyebrow="normal" eye="odoroki" mouth="he" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
+[chara_part name="ajisai_n" umbrella="none" base="normal" eyebrow="normal" eye="odoroki" mouth="he" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 [show_ajisai_n time="500"]
 
 

@@ -44,7 +44,7 @@
     ; 魚座かどうかで画像の初期x位置を切り替え
     [eval exp="tf.walk_startx = (f.walk_keyframe == 'walk_bg_scroll_rev') ? -3840 : 0"]
     [image layer="0" page="fore" name="walk_bg_loop" storage="%image|bg_ame_michi_loop.jpg" folder="bgimage" x="&tf.walk_startx" y="0" width="5120" height="720" visible="true" time="%time|1000"]
-    [xanim name="walk_bg_loop" keyframe="&f.walk_keyframe" time="%time|16000" easing="linear" count="infinite" wait="false"]
+    [xanim name="walk_bg_loop" keyframe="&f.walk_keyframe" time="%anim_time|16000" easing="linear" count="infinite" wait="false"]
 [endmacro]
 
 /*

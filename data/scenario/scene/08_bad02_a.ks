@@ -12,7 +12,7 @@
 
 ; 歩き立ち絵を非表示にして通常立ち絵に差し替え
 [chara_hide name="ajisai_w" layer="3" time="200"]
-[chara_part name="ajisai_n" base="normal" eyebrow="okori" eye="odoroki" mouth="x" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
+[chara_part name="ajisai_n" umbrella="none" base="normal" eyebrow="okori" eye="odoroki" mouth="x" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 [show_ajisai_n]
 
 ; TODO 犬アイコン　右からいれて中央あたりで斜め左下へ
@@ -56,14 +56,16 @@
 
 ; アジサイ: 怒り・驚き・うろたえ（赤面弱）
 [chara_part name="ajisai_n" eyebrow="okori" eye="odoroki" mouth="urotae" effect="akagao_weak"]
+;[chara_part name="ajisai_n" base="normal" eyebrow="okori" eye="odoroki" mouth="urotae" effect="akagao_weak" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 #&f.c_name
-はぁ はぁ ……[p]
+はぁ はぁ …………[p]
 
 
 ; アジサイ: 通常・目閉じ・むくれ（汗）
 [chara_part name="ajisai_n" eyebrow="normal" eye="toji" mouth="mukure" effect="ase"]
+;[chara_part name="ajisai_n" base="normal" eyebrow="normal" eye="toji_emi" mouth="mukure" effect="ase" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 #&f.c_name
-今日のところは これくらいで勘弁してやる[p]
+今日のところは これくらいで勘弁してやる
 
 
 ; ⑦A選択肢（影響なし）
@@ -78,20 +80,24 @@
 
 ; アジサイ: 怒り・ジト目・むくれ
 [chara_part name="ajisai_n" eyebrow="okori" eye="jito" mouth="mukure" effect="none"]
+;[chara_part name="ajisai_n" base="normal" eyebrow="okori" eye="jito" mouth="mukure" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 #&f.c_name
 あのね 勝ち負けじゃないの[p]
 
 
 ; アジサイ: 通常・目閉じ・O
 [chara_part name="ajisai_n" eyebrow="normal" eye="toji" mouth="o"]
+;[chara_part name="ajisai_n" base="normal" eyebrow="normal" eye="toji_emi" mouth="o" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 #&f.c_name
 立ち向かったことを 評価して欲しいの[p]
 
 
 ; アジサイ: 怒り・ジト目・へ
 [chara_part name="ajisai_n" eyebrow="okori" eye="jito" mouth="he"]
+;[chara_part name="ajisai_n" base="normal" eyebrow="okori" eye="jito" mouth="he" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 #&f.c_name
-たとえ試合に勝って 勝負に負けたとしても だよ[p]
+たとえ試合に勝って [r]
+勝負に負けたとしても だよ[p]
 
 
 ; プレイヤー（内心）
@@ -101,12 +107,14 @@
 
 ; アジサイ: 怒り・驚き・O
 [chara_part name="ajisai_n" eyebrow="okori" eye="odoroki" mouth="o"]
+;[chara_part name="ajisai_n" base="normal" eyebrow="okori" eye="odoroki" mouth="o" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 #&f.c_name
 そんな目で見ないで！[p]
 
 
 ; アジサイ: 困り・目閉じ・へ（赤面強）
 [chara_part name="ajisai_n" eyebrow="komari" eye="toji" mouth="he" effect="akagao_strong"]
+;[chara_part name="ajisai_n" base="normal" eyebrow="komari" eye="toji_emi" mouth="he" effect="akagao_strong" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 #&f.c_name
 見るなら もっと違う目で見てほし…………[r]
 …………いやなんでもない[p]
@@ -115,13 +123,15 @@
 ;tips：（楽しんでないか？ まあ本望だけど）
 
 
+[chara_hide name="ajisai_n" layer="3" time="200"]
+
+
 ; プレイヤー（内心）
 #&f.p_name
 （犬に顔を踏まれた（彼女が））[p]
 
 
 ; 暗転・消去・遷移
-[chara_hide name="ajisai_n" layer="3" time="200"]
 [freeimage layer="0" page="fore"]
 [bg storage="black.jpg" time="500"]
 [wait time="200"]

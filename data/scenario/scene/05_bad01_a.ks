@@ -41,7 +41,7 @@
 
 ; 歩き立ち絵から通常立ち絵に
 [chara_hide name="ajisai_w" layer="3" time="500"]
-[chara_part name="ajisai_n" base="normal" eyebrow="okori" eye="toji_emi" mouth="v" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
+[chara_part name="ajisai_n" umbrella="none" base="normal" eyebrow="okori" eye="toji_emi" mouth="v" effect="none" bad01="&f.if_chara_splashed" bad02="&f.if_chara_stomped" bad03="&f.if_chara_stucked"]
 [show_ajisai_n time="500"]
 
 

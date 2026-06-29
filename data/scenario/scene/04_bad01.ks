@@ -7,7 +7,7 @@
 
 
 ; BGM: 雨の音 FI（TODO）
-;[playbgm storage="TODO_bgm_ame.ogg" loop="true" time="1000"]
+[fadeinbgm storage="bgm_ame.wav" loop="true" time="1000"]
 
 ; 背景: 街背景、歩き（雨も降ってる）
 [start_walk_bg]
@@ -18,7 +18,7 @@
 
 ; 立ち絵: 歩きモードで表示（通常・通常・通常）
 [chara_part name="ajisai_w" base="normal" eyebrow="normal" eye="normal" mouth="normal" effect="none" bad01="0" bad02="0" bad03="0"]
-[show_ajisai_n time="500"]
+[show_ajisai_w time="500"]
 
 
 ; プレイヤー（内心）
@@ -104,7 +104,7 @@
 
 ; TODO: 走ってくるトラック（アイコン）を表示
 ; TODO: SE ブーン
-;[playse storage="TODO_se_truck.ogg"]
+[playse storage="se_truck.wav"]
 
 
 ; 暗転
@@ -133,7 +133,7 @@
 [hide_letterbox]
 
 ; BGM: 雨の音 FO（TODO）
-;[fadeoutbgm time="1000"]
+[fadeoutbgm time="1000"]
 
 
 ;★（さりげなく道路側を歩いておいて正解だった。このまま私が水を被れば、あなたは助かる！）

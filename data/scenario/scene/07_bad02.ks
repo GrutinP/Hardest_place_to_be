@@ -7,7 +7,7 @@
 
 
 ; BGM: 雨の音 FI
-;[playbgm storage="TODO_bgm_ame.ogg" loop="true" time="1000"]
+[fadeinbgm storage="bgm_ame.wav" loop="true" time="1000"]
 
 ; 歩き演出開始
 [start_walk_bg]
@@ -113,7 +113,7 @@
 
 
 ; SE 犬のハッハッハッ（ループ・音量抑えめ）
-;[playse storage="TODO_se_dog_hah.ogg" volume="50" loop="true"]
+[playse storage="se_dog_hah.wav" volume="50" loop="true"]
 
 ;ウェイト　犬のSEを聞かせる
 
@@ -189,7 +189,7 @@
 
 
 ; BGM FO
-;[fadeoutbgm time="1000"]
+[fadeoutbgm time="1000"]
 
 
 ; ⑥選択肢◆（右に交わす → ⑥A / ぽち → ⑥B）

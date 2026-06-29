@@ -31,6 +31,9 @@
 [popopo type="file" time="10" tailtime="30" mode="everyone" storage="popopo_custom.mp3" buf="1"]
 ; mode="interval" interval="50" 
 
+
+*name_input
+
 ; 名前入力
 あなたの 名前を 入力してください[r]
 全半角10文字まで
@@ -43,6 +46,20 @@
 *name_done
 [commit]
 [cm]
+
+[jump target="*name_notext" cond="f.p_name==''"]
+[jump target="*name_complete"]
+
+*name_notext
+名前が入力されておりません [r]
+1文字以上入力してください[p]
+
+[jump target="*name_input"]
+
+
+
+*name_complete
+
 
 ; 星座選択UI
 ;[layopt layer="message0" visible="false"]

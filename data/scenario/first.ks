@@ -12,7 +12,7 @@
 ;TIPプラグイン
 [plugin name="tip"]
 ;テーマ一括変換
-[plugin name="theme_kopanda_20"]
+[plugin name="theme_kopanda_19"]
 ;タップエフェクト
 [plugin name="tap_effect"]
 
